@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+
+    <!-- IF using Sass (run gulp sass first), then uncomment below and remove the CSS includes above
+    <link href="css/ionic.app.css" rel="stylesheet">
+    -->
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="cordova.js"></script>
+
+    <!-- your app's js -->
+    <script src="js/app.js"></script>
+    <script src="js/controllers.js"></script>
+    <script src="js/services.js"></script>
+  </head>
+  <body>
+ <style>
+	   .btnholder {
+		  text-align: center;
+		  margin-top:20px;
+		  margin-bottom:20px;
+	}
+	
+		.btn {
+		  background: #3498db;
+		  background-image: -webkit-linear-gradient(top, #3498db, #2980b9);
+		  background-image: -moz-linear-gradient(top, #3498db, #2980b9);
+		  background-image: -ms-linear-gradient(top, #3498db, #2980b9);
+		  background-image: -o-linear-gradient(top, #3498db, #2980b9);
+		  background-image: linear-gradient(to bottom, #3498db, #2980b9);
+		  -webkit-border-radius: 28;
+		  -moz-border-radius: 28;
+		  border-radius: 28px;
+		  font-family: Arial;
+		  color: #ffffff;
+		  font-size: 20px;
+		  padding: 15px 20px 15px 20px;
+		  text-decoration: none;
+		}
+   </style>
+   <audio id="sound1">
+     <source src="sounds/boingggg.mp3">
+   </audio>
+   <p class="btnholder">My First Sound App</p>
+   <p class="btnholder">
+     <span class="btn" id="button1">Play Sound</span>
+   </p>
+    <script>
+      var sound = document.getElementById("sound1");
+      var button = document.getElementById("button1");
+      
+      button.addEventListener( 'click' , function(){
+        sound.play();
+      } )
+    </script>
+</body>
+</html>
